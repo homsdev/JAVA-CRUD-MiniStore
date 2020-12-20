@@ -5,26 +5,31 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>Client List View</title>
+<link type="text/css" rel="stylesheet"
+	href="${pageContext.request.contextPath}/resources/CSS/style.css">
 </head>
 <body>
 	<table>
-		<tr>
-			<th>Name</th>
-			<th>LastaName</th>
-			<th>email</th>
-		</tr>
-		
-		<c:forEach var="client" items="${clientList}">
+		<thead>
 			<tr>
-				<td> ${client.name} </td>
-				<td> ${client.lastname} </td>
-				<td> ${client.email} </td>
+				<th>Name</th>
+				<th>LastaName</th>
+				<th>email</th>
 			</tr>
-			
-		</c:forEach>
 
+		</thead>
 
+		<tbody>
+			<c:forEach var="client" items="${clientList}">
+				<tr>
+					<td>${client.name}</td>
+					<td>${client.lastname}</td>
+					<td>${client.email}</td>
+				</tr>
+			</c:forEach>
+
+		</tbody>
 	</table>
 </body>
 </html>
