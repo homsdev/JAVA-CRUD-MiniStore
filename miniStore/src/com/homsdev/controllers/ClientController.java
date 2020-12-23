@@ -8,6 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.homsdev.controller.entity.Client;
 import com.homsdev.dao.IClientDAO;
@@ -40,6 +41,16 @@ public class ClientController {
 		
 		return "formClient";
 	}
+	
+	@RequestMapping("/update-form")
+	public String showUpdateForm(@RequestParam(name="idClient") int id, Model model ) {
+		
+		Client newClient= clientDAO.getClient(id);
+		model.addAttribute("idClient", id);
+		model.addAttribute("newClient", newClient);
+		return "updateForm";
+	}
+	
 	
 	@PostMapping("/insert")
 	public String insertClient(@ModelAttribute("Client")Client client) {

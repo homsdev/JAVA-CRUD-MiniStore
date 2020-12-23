@@ -22,16 +22,20 @@
 
 		<tbody>
 			<c:forEach var="client" items="${clientList}">
+				<c:url var="updateClient" value="/client/update-form">
+					<c:param name="idClient" value="${client.id}"></c:param>
+				</c:url>
 				<tr>
 					<td>${client.name}</td>
 					<td>${client.lastname}</td>
 					<td>${client.email}</td>
+					<td><a class="btn" type="button" href="${updateClient}">Update</a></td>
 				</tr>
 			</c:forEach>
 
 		</tbody>
 	</table>
-	
+
 	<a class="btn" type="button" href="showForm">Add</a>
 </body>
 </html>
