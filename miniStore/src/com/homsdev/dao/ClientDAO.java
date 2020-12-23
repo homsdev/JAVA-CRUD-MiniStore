@@ -32,4 +32,15 @@ public class ClientDAO implements IClientDAO {
 		return clients;
 	}
 
+
+	@Override
+	@Transactional
+	public void insertClient(Client client) {
+		// TODO Auto-generated method stub
+		Session newSession= sessionFactory.getCurrentSession();
+		newSession.save(client);
+	}
+
+
+
 }

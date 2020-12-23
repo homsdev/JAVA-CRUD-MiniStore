@@ -33,3 +33,19 @@ td,
 th {
   padding: 0.5em;
 }
+
+.btn{
+	background-color: #369681;
+	color: #f2f2f2;
+	border-radius: 4px;
+	text-transform: uppercase;
+	padding: .5em 1em;
+	text-decoration: none;
+}
+
+.btn:hover{
+	background-color: #f2f2f2;
+	color:#369681;
+	border: 1px solid #369681;
+}
+

@@ -31,5 +31,7 @@
 
 		</tbody>
 	</table>
+	
+	<a class="btn" type="button" href="showForm">Add</a>
 </body>
 </html>

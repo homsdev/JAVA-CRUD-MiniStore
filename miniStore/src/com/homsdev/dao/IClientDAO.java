@@ -7,4 +7,7 @@ import com.homsdev.controller.entity.Client;
 
 public interface IClientDAO {
 	public List<Client> getClients();
+	public void insertClient(Client client); 
 }
+
+
